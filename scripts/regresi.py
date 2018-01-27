@@ -3,8 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt 
 
 # training data
-x = np.array([[200], [250], [300], [378], [456], [680], [800]])
-y = np.array([[2000], [3500], [5000], [5400], [6500], [8700], [10000]])
+x = np.array([[200], [250], [300], [378], [456], [680], [750]])
+y = np.array([[2000], [3500], [5000], [5400], [6500], [8700], [9500]])
 
 
 clf = LinearRegression()
