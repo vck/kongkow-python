@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Kongkow IT Web Workshop</title>
+  <link href="static/css/style.css" rel="stylesheet" />
+ </head>
+ <body>
+  <h1 class="header" style="text-align:center">Klasifikasi Nama</h1>
+  <p id="kenal">Masukkan nama kamu pada kolom yang telah tersedia</p>
+  <form name="kenalan" id="form-kenal" action="" method="POST">
+   <input type="text" name="nama" placeholder="Nama Kamu" class="input-control" value="{% if data %}{{nama}}{% endif %}"/>
+   <button type="submit" class="button green">Kirim</button>
+  </form>
+  {%if data%}
+  <table>
+    <tr>
+      <th>Menurut kami, {{nama}} adalah seorang:</th>
+    </tr>
+    <tr>
+      <th><h2>{{data[0]}}</h2>{% if data[0] == 'Laki-laki' %}{{data[2]}}  {% else %} {{data[1]}} {% endif %}% yakin</th>
+    </tr>
+  </table>
+  {%endif%}
+ </body>
+</html>
